@@ -1013,8 +1013,8 @@ font-size: 1rem;
   position: relative;
   width: 98%;
   height: auto;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   background: transparent;
@@ -1022,7 +1022,7 @@ font-size: 1rem;
 
 .latest-product {
   position: relative;
-  width: 19rem;
+  width: 22rem;
   height: 9rem;
   display: flex;
   background: transparent;
@@ -1037,7 +1037,7 @@ font-size: 1rem;
  * LATEST PRODUCT TOP
  **/
 .latest-product-left {
- width: 9rem;
+ width: 10.5rem;
  height: 100%;
  display: flex;
  flex-direction: column;
@@ -1047,7 +1047,7 @@ font-size: 1rem;
  }
 
  .latest-product-right{
-  width: 10rem;
+  width: 11.5rem;
   height: 100%;
   align-items: center;
   justify-content: center;
