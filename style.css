@@ -969,14 +969,129 @@ font-size: 1rem;
   background: var(--cl-hv-btn);
 }
 
+/**
+* LATEST PRODUCTS SECTION4
+**/
+
+.section4-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  position: relative;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  border: none;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  background: rgba(79, 79, 109, 0.185);
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.section4-deals-title {
+  width: 100%;
+  height: 3rem;
+  background:  rgba(47, 47, 65, 0.705);
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.section4-deals-title h2 {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  color: var(--br-1px);
+}
+
+/**
+* LATEST PRODUCTS CONTAINER
+**/
+.latest-products-container {
+  position: relative;
+  width: 98%;
+  height: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  background: transparent;
+}
+
+.latest-product {
+  position: relative;
+  width: 19rem;
+  height: 9rem;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  margin: 0.5rem;
+  justify-content: space-between;
+  border: 1px solid var(--cl-featured-product);
+  border-radius: 4px;
+}
+
+/**
+ * LATEST PRODUCT TOP
+ **/
+.latest-product-left {
+ width: 9rem;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background: rgba(147, 161, 226, 0.329);
+ }
+
+ .latest-product-right{
+  width: 10rem;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: var(--cl-featured-product);
+ }
+
+ .latest-deal-off {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  padding: 0.4rem;
+  height: 1.4rem;
+  color: rgb(236, 233, 7);
+  font-weight: 600;
+  border-end-end-radius: 0.8rem;
+  border-start-start-radius: 0.6rem;
+  margin-right: 5rem;
+  text-align: center;
+  background-color: var(--cl-hover);
+}
 
 
+.latest-btn {
+  border: 0.1px solid rgba(147, 161, 226, 0.329);
+  width: 80%;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cl-btn);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 1s ease-in-out;
+}
 
- 
-
-
-
-
+.latest-btn:hover {
+  background-color: var(--cl-btn);
+  color: white;
+}
 
 
 
