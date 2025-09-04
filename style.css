@@ -1307,7 +1307,7 @@ height: 2rem;
   flex-direction: column;
   gap: 1rem;
   background: rgba(147, 161, 226, 0.329);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   border: 1px solid rgba(147, 161, 226, 0.329);
 }
 
@@ -1361,6 +1361,7 @@ flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 justify-self: center;
+margin-bottom: 1.5rem;
 }
 
 .new-arrival-products-container {
@@ -1477,12 +1478,73 @@ background-color: transparent;
   background: rgb(54, 54, 177);
 }
 
+/**
+* -ECO-SHOP-FOOTER
+**/
+.footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 14rem;
+  background: black;
+  justify-content: space-around;
+}
 
+/**
+FOOTER LEFT
+**/
+.footer-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  background: rgb(19, 27, 29);
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
 
+/**
+FOOTER MIDDLE
+**/
+.footer-middle {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  background: rgb(19, 27, 29);
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  border: 0.1px solid  #464343;
+}
 
+/**
+FOOTER RIGHT
+**/
+.footer-right {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  background: rgb(19, 27, 29);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  position: relative;
+}
 
-
-
+/**
+* COPY RIGHT
+**/
+.copy-right {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(46, 43, 43, 0.39);
+  margin-bottom: auto;
+}
 
 
 
