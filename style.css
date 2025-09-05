@@ -1632,18 +1632,17 @@ background-color: transparent;
 FOOTER LEFT
 **/
 .footer-left {
-  width: 35%;
+  width: 30%;
   height: 100%;
   display: flex;
   background: rgb(15, 15, 15);
   flex-direction: column;
   align-items:  flex-start;
   position: relative;
-  
 }
 
 .footer-left img {
-  width: 9rem;
+  width: 8.5rem;
   height: 3rem;
   margin-top: 0.5rem;
   cursor: pointer;
@@ -1696,7 +1695,7 @@ FOOTER LEFT
 FOOTER MIDDLE
 **/
 .footer-middle {
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1751,7 +1750,7 @@ FOOTER MIDDLE
 FOOTER RIGHT
 **/
 .footer-right {
-  width: 35%;
+  width: 30%;
   height: 100%;
   display: flex;
   background: rgb(15, 15, 15);
