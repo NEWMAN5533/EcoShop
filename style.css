@@ -1652,7 +1652,7 @@ FOOTER LEFT
 
 .download-app {
   width: 100%;
-  height: 20%;
+  height: 25%;
   display: flex;
   text-align: center;
   align-items: center;
@@ -1713,6 +1713,16 @@ FOOTER MIDDLE
   color: var(--br-1px);
   gap: 0.5rem;
   margin-top: -0.5rem;
+}
+
+.home {
+  display: flex;
+  color: rgb(201, 22, 22);
+}
+
+.home:hover{
+  text-decoration: underline;
+  text-decoration-color: rgb(201, 22, 22);
 }
 
 .footer-middle a:hover {
