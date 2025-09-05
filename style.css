@@ -1622,8 +1622,8 @@ background-color: transparent;
   display: flex;
   position: relative;
   width: 100%;
-  height: 14rem;
-  background: black;
+  height: 15rem;
+  background: transparent;
   justify-content: space-around;
 }
 
@@ -1634,12 +1634,33 @@ FOOTER LEFT
   width: 30%;
   height: 100%;
   display: flex;
-  background: rgb(19, 27, 29);
+  background: black;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:  center;
   position: relative;
 }
 
+.footer-left img {
+  width: 90%;
+  height: 18%;
+  margin-top: 1rem;
+}
+
+.download-app {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(39, 34, 34, 0.973);
+  border: 0.1px solid #635f5f;
+}
+
+.download-app h3 {
+  color: rgb(12, 212, 226);
+  font-size: 1.2rem;
+
+}
 /**
 FOOTER MIDDLE
 **/
@@ -1647,13 +1668,41 @@ FOOTER MIDDLE
   width: 40%;
   height: 100%;
   display: flex;
-  background: rgb(19, 27, 29);
+  flex-direction: column;
+  background:  rgb(66, 85, 90);
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.5rem;
   position: relative;
   border: 0.1px solid  #464343;
 }
+
+.footer-middle a{
+  text-decoration: none;
+  color: var(--br-1px);
+}
+
+.footer-middle a:hover {
+  text-decoration: underline;
+}
+
+.quick-links {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:  rgba(39, 34, 34, 0.973);
+  border: 0.1px solid #635f5f;
+}
+
+.quick-links h3 {
+  color: rgb(13, 57, 204);
+  text-decoration: underline;
+  white-space: normal;
+  line-height: 1.4;
+}
+
 
 /**
 FOOTER RIGHT
@@ -1662,11 +1711,45 @@ FOOTER RIGHT
   width: 30%;
   height: 100%;
   display: flex;
-  background: rgb(19, 27, 29);
-  align-items: flex-start;
-  justify-content: space-between;
+  background:  rgb(66, 85, 90);
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 0.5rem;
   position: relative;
+}
+
+.news-letter {
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  background:  rgba(39, 34, 34, 0.973);
+  border: 0.1px solid #635f5f;
+}
+
+.news-letter h3{
+  color:  rgb(221, 72, 13);
+  font-size: 1.2rem;
+}
+
+.input-email{
+  display: flex;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.input-email input {
+  width: 90%;
+  height: 70%;
+  border-radius: 4px;
+  align-self: center;
+  border: none;
 }
 
 /**
@@ -1674,12 +1757,12 @@ FOOTER RIGHT
 **/
 .copy-right {
   width: 100%;
-  height: 3rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: red;
+  background: rgba(0, 0, 0, 0.219);
   margin-bottom: auto;
 }
 
