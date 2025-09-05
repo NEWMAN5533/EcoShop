@@ -1821,10 +1821,13 @@ FOOTER RIGHT
   text-align: center;
   border: 0.1px solid  #383434;
   background: rgb(15, 15, 15);
-  margin-bottom: 0.2rem;
   overflow: hidden;
 }
 
+
+.copyright {
+  color: rgb(197, 18, 18);
+}
 
 
 
