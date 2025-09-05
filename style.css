@@ -1632,12 +1632,12 @@ background-color: transparent;
 FOOTER LEFT
 **/
 .footer-left {
-  width: 30%;
+  width: 35%;
   height: 100%;
   display: flex;
   background: rgb(15, 15, 15);
   flex-direction: column;
-  align-items:  center;
+  align-items:  flex-start;
   position: relative;
   
 }
@@ -1645,8 +1645,9 @@ FOOTER LEFT
 .footer-left img {
   width: 9rem;
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   cursor: pointer;
+  margin-left: 0.7rem;
 }
 
 .download-app {
@@ -1665,11 +1666,37 @@ FOOTER LEFT
   font-size: 1.2rem;
 
 }
+
+.privacy-policy {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0.4rem;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.privacy-policy a{
+  display: flex;
+  text-decoration: none;
+  margin-left: 0.7rem;
+  color: rgb(180, 69, 17);
+  gap: 0.5rem;
+  transition: 1s ease;
+}
+
+.privacy-policy a:hover{
+  text-decoration: underline;
+}
 /**
 FOOTER MIDDLE
 **/
 .footer-middle {
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1714,7 +1741,7 @@ FOOTER MIDDLE
 FOOTER RIGHT
 **/
 .footer-right {
-  width: 30%;
+  width: 35%;
   height: 100%;
   display: flex;
   background: rgb(15, 15, 15);
