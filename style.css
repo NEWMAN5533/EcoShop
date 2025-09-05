@@ -1625,6 +1625,7 @@ background-color: transparent;
   height: 15rem;
   background: transparent;
   justify-content: space-around;
+  margin-bottom: 0;
 }
 
 /**
@@ -1634,16 +1635,18 @@ FOOTER LEFT
   width: 30%;
   height: 100%;
   display: flex;
-  background: black;
+  background: rgb(15, 15, 15);
   flex-direction: column;
   align-items:  center;
   position: relative;
+  
 }
 
 .footer-left img {
-  width: 90%;
-  height: 18%;
+  width: 9rem;
+  height: 3rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .download-app {
@@ -1652,8 +1655,8 @@ FOOTER LEFT
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(39, 34, 34, 0.973);
-  border: 0.1px solid #635f5f;
+  background: rgb(15, 15, 15);
+  border: 0.1px solid  #383434;
 }
 
 .download-app h3 {
@@ -1669,17 +1672,19 @@ FOOTER MIDDLE
   height: 100%;
   display: flex;
   flex-direction: column;
-  background:  rgb(66, 85, 90);
+  background:  rgb(15, 15, 15);
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  justify-content: flex-start;
   position: relative;
-  border: 0.1px solid  #464343;
+  border: 0.1px solid  #383434;
 }
 
 .footer-middle a{
   text-decoration: none;
+  padding: 0.7rem;
   color: var(--br-1px);
+  gap: 0.5rem;
+  margin-top: -0.5rem;
 }
 
 .footer-middle a:hover {
@@ -1692,12 +1697,12 @@ FOOTER MIDDLE
   display: flex;
   align-items: center;
   justify-content: center;
-  background:  rgba(39, 34, 34, 0.973);
-  border: 0.1px solid #635f5f;
+  background: rgb(15, 15, 15);
+
 }
 
 .quick-links h3 {
-  color: rgb(13, 57, 204);
+  color: rgb(40, 69, 163);
   text-decoration: underline;
   white-space: normal;
   line-height: 1.4;
@@ -1711,12 +1716,18 @@ FOOTER RIGHT
   width: 30%;
   height: 100%;
   display: flex;
-  background:  rgb(66, 85, 90);
+  background: rgb(15, 15, 15);
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
+}
+
+.footer-right h6{
+  font-size: 1rem;
+  padding: 0.3rem;
+  color: white;
 }
 
 .news-letter {
@@ -1726,8 +1737,8 @@ FOOTER RIGHT
   justify-content: center;
   text-align: center;
   display: flex;
-  background:  rgba(39, 34, 34, 0.973);
-  border: 0.1px solid #635f5f;
+  background:  rgb(15, 15, 15);
+  border: 0.1px solid  #383434;
 }
 
 .news-letter h3{
@@ -1737,8 +1748,14 @@ FOOTER RIGHT
 
 .input-email{
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 20%;
+  color: var(--cl-hover);
+  height: 30%;
+  gap: 0.2rem;
+  font-family: sans-serif;
+  text-align: center;
+  margin-left: 0.4rem;
   align-items: center;
   justify-content: center;
   background: transparent;
@@ -1746,10 +1763,49 @@ FOOTER RIGHT
 
 .input-email input {
   width: 90%;
-  height: 70%;
-  border-radius: 4px;
+  height: 30%;
+  border-radius: 2px;
   align-self: center;
   border: none;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 20%;
+  background: transparent;
+}
+
+.social-icons img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.call-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-between;
+  width: 100%;
+  height: 17%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.call-us a {
+  display: flex;
+  align-items: center;
+  color: var(--cl-hover);
+}
+
+
+.call-us img {
+  width: 2rem;
+  height: 2rem;
 }
 
 /**
@@ -1759,11 +1815,14 @@ FOOTER RIGHT
   width: 100%;
   height: 2rem;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.219);
-  margin-bottom: auto;
+  border: 0.1px solid  #383434;
+  background: rgb(15, 15, 15);
+  margin-bottom: 0.2rem;
+  overflow: hidden;
 }
 
 
