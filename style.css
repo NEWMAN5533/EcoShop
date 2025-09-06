@@ -197,8 +197,15 @@ border: 1px solid var(--cl-secondary);
   color: var(--cl-btn);
   border: 0.1px solid rgb(209, 178, 0);
   padding: 0.4rem;
-  height: 2rem;
+  height: 18%;
+  width: 80%;
+  text-align: center;
+  background: transparent;
   align-items: center;
+}
+
+.special-offer h3 {
+  font-size: 1.2rem;
 }
 
 .hero-left h4{
@@ -2211,7 +2218,9 @@ border: 1px solid var(--cl-secondary);
   color: var(--cl-btn);
   border: 0.1px solid rgb(209, 178, 0);
   padding: 0.4rem;
-  height: 2rem;
+  height: 35%;
+  width: 90%;
+  text-align: center;
   align-items: center;
 }
 
@@ -2857,7 +2866,10 @@ border: 1px solid var(--cl-secondary);
   color: var(--cl-btn);
   border: 0.1px solid rgb(209, 178, 0);
   padding: 0.4rem;
-  height: 2rem;
+  height: 18%;
+  text-align: center;
+  width: 80%;
+  text-align: center;
   align-items: center;
 }
 
@@ -3502,7 +3514,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.4rem;
-  height: 2rem;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   align-items: center;
 }
 
@@ -4148,8 +4162,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
-  width: auto;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -4802,8 +4817,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
-  width: auto;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -5457,9 +5473,11 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
   width: auto;
   display: flex;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   justify-content: center;
   text-align: center;
   margin-bottom: 0.4rem;
@@ -6113,8 +6131,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
-  width: auto;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -6770,8 +6789,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
-  width: auto;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -7425,8 +7445,9 @@ border: 1px solid var(--cl-secondary);
   display: none;
   color: var(--cl-btn);
   padding: 0.5rem;
-  height: 2.2rem;
-  width: auto;
+  height: 18%;
+  width: 80%;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
