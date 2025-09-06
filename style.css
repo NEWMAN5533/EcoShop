@@ -1639,18 +1639,18 @@ background-color: transparent;
 FOOTER LEFT
 **/
 .footer-left {
-  width: 30%;
+  width: 33%;
   height: 100%;
   display: flex;
   background: rgb(15, 15, 15);
   flex-direction: column;
-  align-items:  flex-start;
+  align-items:  center;
   position: relative;
 }
 
 .footer-left img {
   width: 8.5rem;
-  height: 3rem;
+  height: 15%;
   margin-top: 0.5rem;
   cursor: pointer;
   margin-left: 0.7rem;
@@ -1663,7 +1663,7 @@ FOOTER LEFT
   text-align: center;
   align-items: center;
   justify-content: center;
-  background: rgb(15, 15, 15);
+  background:  rgb(15, 15, 15);
   border: 0.1px solid  #383434;
 }
 
@@ -1675,23 +1675,46 @@ FOOTER LEFT
 
 .privacy-policy {
   width: 100%;
-  height: 50%;
+  height: 40%;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
   flex-direction: column;
   text-align: center;
   margin-top: 0.4rem;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   background-color: transparent;
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 10%;
+  color: white;
+  background: rgba(45, 221, 21, 0.37);
+  margin-bottom: 0.3rem;
+}
+
+.contact-us a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .privacy-policy a{
   display: flex;
   text-decoration: none;
   margin-left: 0.7rem;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
   color: rgb(180, 69, 17);
-  gap: 0.5rem;
+  gap: 1rem;
   transition: 1s ease;
 }
 
@@ -1702,7 +1725,7 @@ FOOTER LEFT
 FOOTER MIDDLE
 **/
 .footer-middle {
-  width: 40%;
+  width: 37%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1723,12 +1746,13 @@ FOOTER MIDDLE
 
 .home {
   display: flex;
-  color: rgb(201, 22, 22);
+  color: rgb(22, 189, 201);
+  text-decoration: dashed;
 }
 
 .home:hover{
   text-decoration: underline;
-  text-decoration-color: rgb(201, 22, 22);
+  text-decoration-color: rgb(12, 212, 226);
 }
 
 .footer-middle a:hover {
@@ -1843,7 +1867,8 @@ FOOTER RIGHT
 .call-us a {
   display: flex;
   align-items: center;
-  color: var(--cl-hover);
+  color: var(--cl-btn);
+  text-decoration: underline;
 }
 
 
@@ -1870,7 +1895,7 @@ FOOTER RIGHT
 
 
 .copyright {
-  color: rgb(197, 18, 18);
+  color: rgb(231, 228, 228);
 }
 
 

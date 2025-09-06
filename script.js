@@ -16,4 +16,5 @@ setInterval(autoSlide, 3000);
 
 //  COPYRIGHT DATING //
 
+
 document.getElementById('year-simple').textContent = new Date().getFullYear();
