@@ -4919,34 +4919,6 @@ font-family: 'Courier New', Courier, monospace;
   overflow: hidden;
 }
 
-/**
-* HERO WE ARE OPEN
-**/
-.we-open {
-  display: flex;
-  width: 6rem;
-  height: 6rem;
-  margin-top: -8rem;
-  margin-right: 65%;
-  background: transparent;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  animation: translateX 4s ease-in-out infinite;
-}
-
-@keyframes translateX {
-  100%{
-    transform: translateX(6px);
-  }
-}
-
-.we-open img {
-  width: 100%;
-  height: 100%;
-  rotate: 5deg;
-}
-
 
 
 /**
