@@ -2167,7 +2167,7 @@ font-family: 'Courier New', Courier, monospace;
  }
 
 /* 6. Small tablets */
-@media (min-width: 600px) { 
+@media (max-width: 600px) { 
       nav {
   width: 100%;
   height: 2.2rem;
@@ -2607,7 +2607,7 @@ font-family: 'Courier New', Courier, monospace;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: rem;
 }
 
 /**
