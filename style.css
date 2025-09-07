@@ -338,13 +338,24 @@ font-family: 'Courier New', Courier, monospace;
   margin-top: 10rem;
   background-color: transparent;
   z-index: 1;
+  transform-style: preserve-3d;
+  animation: spinY 8s linear infinite;
 }
 
 .img-container img {
  width: 60%;
  height: 110%;
  margin-bottom: 0.4rem;
- 
+}
+
+@keyframes spinY {
+  from {
+    transform: rotateY(0deg);
+    transition: 1s;
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 
