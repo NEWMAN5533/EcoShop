@@ -2437,6 +2437,8 @@ font-family: 'Courier New', Courier, monospace;
   min-height: 100vh;
 }
 
+
+
 }
 
 /* 7. Mid-size tablets */
@@ -2764,13 +2766,15 @@ font-family: 'Courier New', Courier, monospace;
 }
 
 .deal-timer .box {
-  display: flex;
+ display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 3.8rem;
   height: 3rem;
-
+  background-color: rgb(39, 39, 63);
+  border-radius: var(--br-container);
+  color: white;
   box-shadow: 0 0 2px rgb(35, 35, 56);
   margin: 0 0.4rem;
 }
@@ -3388,7 +3392,9 @@ align-self: center;
   justify-content: center;
   width: 3.8rem;
   height: 3rem;
+  background-color: rgb(39, 39, 63);
   border-radius: var(--br-container);
+  color: white;
   box-shadow: 0 0 2px rgb(35, 35, 56);
   margin: 0 0.4rem;
 }
