@@ -4,41 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
 
   <style>
-  body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-  .sidebar {
-    width: 220px; background: #222; color: #fff; height: 100vh;
-    position: fixed; top: 0; left: 0; padding: 20px;
-  }
-  .sidebar button {
-    display: block; width: 100%; padding: 10px; margin: 5px 0;
-    background: #444; border: none; color: white; cursor: pointer;
-  }
-  .sidebar button:hover { background: #666; }
-  .content { margin-left: 240px; padding: 20px; }
-  form, .edit-form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  input, select, button { padding: 10px; margin: 8px 0; width: 100%; }
-  button { background: #007bff; color: white; border: none; cursor: pointer; }
-  button:hover { background: #0056b3; }
-  table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
-  th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-  th { background: #007bff; color: white; }
-  img { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
-  .action-btn { padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; }
-  .edit { background: #28a745; color: white; }
-  .delete { background: #dc3545; color: white; }
-  .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
-  .modal-content { background: white; padding: 20px; border-radius: 10px; width: 400px; }
-  .filters { margin-top: 15px; display: flex; gap: 10px; }
-  .filters input, .filters select { flex: 1; }
+
 </style>
 
 </head>
 <body>
+  <!--------NAVIGATION BAR--------------->
+  <nav>
+    <!------LEFT NAV---->
+    <div class="left">
+      <h2>Admin Dashboard</h2>
+    </div>
+    <!----RIGHT NAV----->
+    <div class="right">
+      <span class="gh-flag">GH <img src="./images/flag2.jpg" alt=""></span>
+
+      <div class="hamburger" id="toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
   <!-- Sidebar + Main Content will go here -->
-  <div class="sidebar">
+      <div class="sidebar">
   <h3>Admin Panel</h3>
   <p>Categories</p>
   <button onclick="showForm('electronics')">Electronics</button>
@@ -55,10 +49,10 @@
   <button onclick="loadProducts()">View All Products</button>
 </div>
 
-<div class="content">
+
+<div class="content" id="manager">
   <h2>Upload Products</h2>
   <div id="form-container">
-    <h2>Upload Product</h2>
 <form id="productForm">
   <input type="text" id="name" placeholder="Product Name" required><br>
   <input type="number" id="price" placeholder="Price" required><br>
@@ -83,6 +77,8 @@
       <option value="home_appliances">Home Appliances</option>
       <option value="beauty">Beauty</option>
     </select>
+
+    <!----SECTIONS FILTERING------>
     <select id="filterSection">
       <option value="">All Sections</option>
       <option value="featured">Featured</option>
@@ -130,7 +126,31 @@
   </div>
 </div>
 
-  
   <script type="module" src="admin.js"></script>
+
+
+<script>
+  // toggle //
+const sidebar = document.querySelector(".sidebar");
+
+const toggler = document.getElementById("toggler");
+
+const manager = document.getElementById("manager");
+
+// add EventListener //
+toggler.addEventListener("click", function(e) {
+  if (sidebar.style.left === "-500px") {
+    sidebar.style.left = "0px";
+  } else {
+    sidebar.style.left = "-500px";
+  }
+
+  manager.style.margin = "0px";
+});
+
+
+</script>
+
+
 </body>
 </html>

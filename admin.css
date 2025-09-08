@@ -1,0 +1,272 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  overflow: hidden;
+}
+
+
+
+  body { font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+:root {
+  /**
+  COLORS
+  **/
+  --cl-nav-bg: #fff;
+  --cl-logo: rgb(12, 194, 66);
+  --cl-primary: rgb(15, 15, 15);
+  --cl-hover: rgb(12, 194, 66);
+  --cl-secondary: rgba(32, 185, 57, 0.473);
+  --cl-btn: rgb(12, 79, 133);
+  --cl-hover: rgb(26, 119, 22);
+  --cl-btn-hover:  rgb(24, 126, 53);
+  --cl-section: #bebebe;
+  --cl-fast-deal: rgba(201, 192, 153, 0.288);
+  --cl-featured-product: #f2f2f2;
+  --cl-featured-deal: rgba(105, 89, 17, 0.726); 
+
+  /**
+  * BORDER-RADIUS
+  **/
+  --br-btn: 8px;
+  --br-container: 0.5rem;
+  --br-section: 1.5rem;
+  --br-1px:rgb(209, 178, 0);
+  --cl-hv-btn:  rgb(19, 106, 177);
+
+  /**
+  * FNT SIZE
+  **/
+  --fs-category: 0.8rem;
+  --fs-featured: 2.8rem;
+  /**
+  * BTN PADDING
+  **/
+  --padding-btn: 0.8rem;
+}
+
+nav {
+  width: 100%;
+  height: 3rem;
+  background-color:var(--cl-nav-bg);
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-end: 1px solid var(--cl-secondary);
+  position: fixed;
+  z-index: 10000;
+}
+
+nav .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: blue;
+  text-decoration: underline;
+}
+
+.left h2{
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: 1s ease;
+  padding: 0.6rem;
+}
+
+.left h2:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  color: var(--cl-hover);
+}
+
+/** 
+* RIGHT NAV
+**/
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 1rem;
+}
+
+.gh-flag {
+padding: 0.2rem;
+width: 4rem;
+height: 1.6rem;
+padding: 0.2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 0.1px solid var(--cl-primary)
+}
+
+.gh-flag img {
+  width: auto;
+  height: 1.5rem;
+  ;
+}
+
+
+
+.right a{
+  color: rgba(156, 133, 0, 0.719)
+}
+
+.right a:hover{
+  text-decoration: underline;
+  color: var(--cl-hover);
+}
+
+/**
+* HAMBURGER MENU
+**/
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  display: block;
+  background-color: var(--cl-primary);
+  border-radius: 2px;
+  margin: 5px 0 0;
+}
+
+  .sidebar {
+    width: 230px;
+    background: #8b5656;
+    color: #fff;
+    height: 100vh;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    padding: 20px;
+    transition: 0.5s ease;
+  }
+
+
+  .sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  .sidebar button:hover {
+    background: #666;
+  }
+  .content {
+    margin-left: 240px;
+    padding: 20px;
+    overflow: hidden;
+  }
+  form, .edit-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  input, select, button {
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+  }
+
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  text-align: center;
+}
+
+  th {
+    background: #007bff;
+    color: white;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .edit {
+    background: #28a745;
+    color: white;
+  }
+
+  .delete {
+    background: #dc3545;
+    color: white;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+  }
+
+  .filters {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .filters input, .filters select {
+    flex: 1;
+  }
+
