@@ -4,6 +4,83 @@ import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } 
 import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+
+
+
+// upload products //
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { app } from "./firebaseConfig.js"; // adjust if you kept config inline
+
+
+const productForm = document.getElementById("productForm");
+const statusEl = document.getElementById("status");
+
+// Ensure only admin can use this page
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    window.location.href = "login.html";
+  }
+});
+
+productForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const price = parseFloat(document.getElementById("price").value);
+  const category = document.getElementById("category").value.trim();
+  const description = document.getElementById("description").value.trim();
+  const file = document.getElementById("image").files[0];
+
+  if (!file) {
+    statusEl.textContent = "Please select an image!";
+    return;
+  }
+
+  try {
+    // 1. Upload image to Firebase Storage
+    const storageRef = ref(storage, `products/${Date.now()}_${file.name}`);
+    await uploadBytes(storageRef, file);
+    const imageUrl = await getDownloadURL(storageRef);
+
+    // 2. Save product details in Firestore
+    await addDoc(collection(db, "products"), {
+      name,
+      price,
+      category,
+      description,
+      imageUrl,
+      createdAt: new Date()
+    });
+
+    statusEl.textContent = "✅ Product uploaded successfully!";
+    productForm.reset();
+  } catch (err) {
+    statusEl.textContent = "❌ Error: " + err.message;
+    console.error(err);
+  }
+});
+
+// Upload products ends here //
+
+// TWO STEP VERIFICATION //
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    const roleDoc = await getDoc(doc(db, "roles", user.uid));
+    if (!(roleDoc.exists() && roleDoc.data().role === "admin")) {
+      window.location.href = "index.html"; // 🚫 kick them back to homepage
+    }
+  } else {
+    window.location.href = "login.html"; // 🚫 force login first
+  }
+});
+// TWO STEP VERIFICATION //
+
+
 // === Firebase Config (replace with your own) ===
 const firebaseConfig = {
   apiKey: "AIzaSyC6lGL985wSmZIedzN-tnkMGkTI3GU_5Mg",

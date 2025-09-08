@@ -723,5 +723,28 @@
   </div>
 
 <script src="script.js"></script>
+
+
+<!-- homepage.html -->
+<a id="adminLink" href="admin.html" style="display: none;">Admin Dashboard</a>
+
+<script type="module">
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  import { app } from "./firebaseConfig.js"; // if you separated config
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      const roleDoc = await getDoc(doc(db, "roles", user.uid));
+      if (roleDoc.exists() && roleDoc.data().role === "admin") {
+        document.getElementById("adminLink").style.display = "inline"; // ✅ show only to admins
+      }
+    }
+  });
+</script>
+
 </body>
 </html>

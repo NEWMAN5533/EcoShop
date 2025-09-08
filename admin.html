@@ -57,7 +57,20 @@
 
 <div class="content">
   <h2>Upload Products</h2>
-  <div id="form-container"></div>
+  <div id="form-container">
+    <h2>Upload Product</h2>
+<form id="productForm">
+  <input type="text" id="name" placeholder="Product Name" required><br>
+  <input type="number" id="price" placeholder="Price" required><br>
+  <input type="text" id="category" placeholder="Category (e.g. shoes)" required><br>
+  <textarea id="description" placeholder="Description"></textarea><br>
+  <input type="file" id="image" accept="image/*" required><br>
+  <button type="submit">Upload</button>
+</form>
+
+<p id="status"></p>
+
+  </div>
 
   <h2>Manage Products</h2>
   <!-- Filters -->
