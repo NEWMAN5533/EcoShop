@@ -841,6 +841,11 @@ align-self: center;
   border: 1px solid var(--br-1px);
   border-radius: 6px;
 }
+.flash-title{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 
 .flash-top {
   width: 7rem;
@@ -868,6 +873,7 @@ align-self: center;
   flex-direction: column;
   background-color: var(--cl-featured-product);
 }
+
 
 .flash-bottom .old-price{
   text-decoration: line-through;
