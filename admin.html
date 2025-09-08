@@ -30,7 +30,7 @@
     </div>
   </nav>
 
-
+<!------------MAIN--CONTAINER------------------->
   <!-- Sidebar + Main Content will go here -->
       <div class="sidebar">
   <h3>Admin Panel</h3>
@@ -49,9 +49,12 @@
   <button onclick="loadProducts()">View All Products</button>
 </div>
 
-
+<div class="content-wrapper">
 <div class="content" id="manager">
-  <h2>Upload Products</h2>
+  <div class="section-title">
+    <h2>Upload Products</h2>
+</div>
+
   <div id="form-container">
 <form id="productForm">
   <input type="text" id="name" placeholder="Product Name" required><br>
@@ -97,6 +100,8 @@
     <button id="nextPage">Next ➡</button>
   </div>
 </div>
+</div>
+
 
 <!-- Edit Modal -->
 <div class="modal" id="editModal">
@@ -137,16 +142,23 @@ const toggler = document.getElementById("toggler");
 
 const manager = document.getElementById("manager");
 
-// add EventListener //
-toggler.addEventListener("click", function(e) {
-  if (sidebar.style.left === "-500px") {
-    sidebar.style.left = "0px";
+
+
+// Toggle sidebar when button is clicked
+toggler.addEventListener("click", function () {
+  if (sidebar.style.left === "0px") {
+    sidebar.style.left = "-500px";
   } else {
+    sidebar.style.left = "0px";
+  }
+});
+
+window.addEventListener("click", function(e) {
+  if (!sidebar.contains(e.target) && (e.target) !== toggler) {
     sidebar.style.left = "-500px";
   }
+})
 
-  manager.style.margin = "0px";
-});
 
 
 </script>

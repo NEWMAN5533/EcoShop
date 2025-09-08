@@ -58,6 +58,7 @@ nav {
   background-color:var(--cl-nav-bg);
   padding: 1rem 1.1rem;
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   border-block-end: 1px solid var(--cl-secondary);
@@ -69,7 +70,7 @@ nav .left {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: blue;
+  color: rgba(34, 197, 29, 0.87);
   text-decoration: underline;
 }
 
@@ -96,6 +97,8 @@ nav .left {
   gap: 1.6rem;
   padding: 1rem;
 }
+
+
 
 .gh-flag {
 padding: 0.2rem;
@@ -146,7 +149,7 @@ border: 0.1px solid var(--cl-primary)
 
   .sidebar {
     width: 230px;
-    background: #8b5656;
+    background: #3cb6cc;
     color: #fff;
     height: 100vh;
     position: absolute;
@@ -154,6 +157,10 @@ border: 0.1px solid var(--cl-primary)
     left: 0;
     padding: 20px;
     transition: 0.5s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
   }
 
 
@@ -167,15 +174,60 @@ border: 0.1px solid var(--cl-primary)
     color: white;
     cursor: pointer;
   }
+
+
   .sidebar button:hover {
     background: #666;
   }
+
+/**
+** CONTENT WRAPPER 
+**/
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  justify-self: center;
+  background: transparent;
+}
+
   .content {
-    margin-left: 240px;
+    width: 90%;
+    height: max-content;
+    align-items: center;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    overflow: hidden;
   }
+
+
+  .section-title{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    margin-top: 4rem;
+    border-end-end-radius: 2rem;
+    border-start-start-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+ .section-title h2 {
+  color: #ffffff;
+ }
+
   form, .edit-form {
+    width: 90%;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -186,6 +238,7 @@ border: 0.1px solid var(--cl-primary)
     padding: 10px;
     margin: 8px 0;
     width: 100%;
+    height: 2.4rem;
   }
 
   button {
@@ -193,6 +246,7 @@ border: 0.1px solid var(--cl-primary)
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 2rem;
   }
 
   button:hover {
