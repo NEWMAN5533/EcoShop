@@ -152,10 +152,13 @@ border: 0.1px solid var(--cl-primary)
     color: #fff;
     height: 100vh;
     top: 3rem;
+    bottom: 2rem;
     padding: 20px;
     transition: 0.5s ease;
   position: fixed; /* or absolute if you want */
   left: 0;
+  align-items: center;
+  text-align: center;
   width: 230px;      /* adjust */
   height: 100vh;     /* full screen height */
   border-right: 1px solid #ddd;
@@ -180,6 +183,15 @@ border: 0.1px solid var(--cl-primary)
     border: none;
     color: white;
     cursor: pointer;
+  }
+
+  .sidebar h3 {
+    color: pink;
+  }
+
+  .sidebar p{
+    color:rgb(179, 26, 26);
+    font-size: 1.1rem;
   }
 
 
@@ -221,8 +233,6 @@ border: 0.1px solid var(--cl-primary)
     justify-content: center;
     background: black;
     margin-top: 4rem;
-    border-end-end-radius: 2rem;
-    border-start-start-radius: 2rem;
     margin-bottom: 2rem;
   }
  .section-title h2 {
@@ -231,10 +241,13 @@ border: 0.1px solid var(--cl-primary)
 
   form, .edit-form {
     width: 90%;
-    height: 34rem;
+    height: 24rem;
     display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
     background: white;
     padding: 20px;
     border-radius: 8px;
