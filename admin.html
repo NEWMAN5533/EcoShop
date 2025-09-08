@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="admin.css">
-
-  <style>
-
-</style>
-
 </head>
 <body>
   <!--------NAVIGATION BAR--------------->
@@ -31,14 +26,20 @@
   </nav>
 
 <!------------MAIN--CONTAINER------------------->
-  <!-- Sidebar + Main Content will go here -->
-      <div class="sidebar">
+<div class="sidebar">
   <h3>Admin Panel</h3>
+
   <p>Categories</p>
-  <button onclick="showForm('electronics')">Electronics</button>
-  <button onclick="showForm('fashion')">Fashion</button>
-  <button onclick="showForm('home_appliances')">Home Appliances</button>
-  <button onclick="showForm('beauty')">Beauty</button>
+  <!-- Your categories added here -->
+  <button onclick="showForm('men')">Men's Fashion</button>
+  <button onclick="showForm('women')">Women's Fashion</button>
+  <button onclick="showForm('kids')">Kid's Fashion</button>
+  <button onclick="showForm('muslim')">Muslim's Section</button>
+  <button onclick="showForm('health_beauty')">Health & Beauty</button>
+  <button onclick="showForm('accessories')">Accessories</button>
+  <button onclick="showForm('home_kitchen')">Home & Kitchen</button>
+  <button onclick="showForm('baby_toddler')">Baby & Toddler</button>
+
   <hr>
   <p>Homepage Sections</p>
   <button onclick="showForm('featured')">Featured</button>
@@ -50,58 +51,59 @@
 </div>
 
 <div class="content-wrapper">
-<div class="content" id="manager">
-  <div class="section-title">
-    <h2>Upload Products</h2>
-</div>
+  <div class="content" id="manager">
+    <div class="section-title">
+      <h2>Upload Products</h2>
+    </div>
 
-  <div id="form-container">
-<form id="productForm">
-  <input type="text" id="name" placeholder="Product Name" required><br>
-  <input type="number" id="price" placeholder="Price" required><br>
-  <input type="text" id="category" placeholder="Category (e.g. shoes)" required><br>
-  <textarea id="description" placeholder="Description"></textarea><br>
-  <input type="file" id="image" accept="image/*" required><br>
-  <button type="submit">Upload</button>
-</form>
+    <div id="form-container">
+      <form id="productForm">
+        <input type="text" id="name" placeholder="Product Name" required><br>
+        <input type="number" id="price" placeholder="Price" required><br>
+        <textarea id="description" placeholder="Description"></textarea><br>
+        <input type="file" id="image" accept="image/*" required><br>
+        <input type="text" id="category" placeholder="Category (e.g. shoes)" required><br>
+        <button type="submit">Upload</button>
+      </form>
+      <p id="status"></p>
+    </div>
 
-<p id="status"></p>
+    <h2>Manage Products</h2>
+    <!-- Filters -->
+    <div class="filters">
+      <input type="text" id="searchBox" placeholder="Search by name...">
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="men">Men's Fashion</option>
+        <option value="women">Women's Fashion</option>
+        <option value="kids">Kid's Fashion</option>
+        <option value="muslim">Muslim's Section</option>
+        <option value="health_beauty">Health & Beauty</option>
+        <option value="accessories">Accessories</option>
+        <option value="home_kitchen">Home & Kitchen</option>
+        <option value="baby_toddler">Baby & Toddler</option>
+      </select>
 
+      <!----SECTIONS FILTERING------>
+      <select id="filterSection">
+        <option value="">All Sections</option>
+        <option value="featured">Featured</option>
+        <option value="fast_deal">Fast Deal</option>
+        <option value="flash_sale">Flash Sale</option>
+        <option value="new_arrivals">New Arrivals</option>
+      </select>
+    </div>
+
+    <div id="product-table"></div>
+
+    <!-- Pagination -->
+    <div id="pagination" style="margin-top:15px; text-align:center;">
+      <button id="prevPage">⬅ Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage">Next ➡</button>
+    </div>
   </div>
-
-  <h2>Manage Products</h2>
-  <!-- Filters -->
-  <div class="filters">
-    <input type="text" id="searchBox" placeholder="Search by name...">
-    <select id="filterCategory">
-      <option value="">All Categories</option>
-      <option value="electronics">Electronics</option>
-      <option value="fashion">Fashion</option>
-      <option value="home_appliances">Home Appliances</option>
-      <option value="beauty">Beauty</option>
-    </select>
-
-    <!----SECTIONS FILTERING------>
-    <select id="filterSection">
-      <option value="">All Sections</option>
-      <option value="featured">Featured</option>
-      <option value="fast_deal">Fast Deal</option>
-      <option value="flash_sale">Flash Sale</option>
-      <option value="new_arrivals">New Arrivals</option>
-    </select>
-  </div>
-
-  <div id="product-table"></div>
-
-  <!-- Pagination -->
-  <div id="pagination" style="margin-top:15px; text-align:center;">
-    <button id="prevPage">⬅ Prev</button>
-    <span id="pageInfo">Page 1</span>
-    <button id="nextPage">Next ➡</button>
-  </div>
 </div>
-</div>
-
 
 <!-- Edit Modal -->
 <div class="modal" id="editModal">
@@ -112,10 +114,14 @@
       <input type="number" id="editPrice" placeholder="Price" required>
       <select id="editCategory">
         <option value="">--Category--</option>
-        <option value="electronics">Electronics</option>
-        <option value="fashion">Fashion</option>
-        <option value="home_appliances">Home Appliances</option>
-        <option value="beauty">Beauty</option>
+        <option value="men">Men's Fashion</option>
+        <option value="women">Women's Fashion</option>
+        <option value="kids">Kid's Fashion</option>
+        <option value="muslim">Muslim's Section</option>
+        <option value="health_beauty">Health & Beauty</option>
+        <option value="accessories">Accessories</option>
+        <option value="home_kitchen">Home & Kitchen</option>
+        <option value="baby_toddler">Baby & Toddler</option>
       </select>
       <select id="editSection">
         <option value="">--Section--</option>
@@ -131,38 +137,28 @@
   </div>
 </div>
 
-  <script type="module" src="admin.js"></script>
-
+<script type="module" src="admin.js"></script>
 
 <script>
   // toggle //
-const sidebar = document.querySelector(".sidebar");
+  const sidebar = document.querySelector(".sidebar");
+  const toggler = document.getElementById("toggler");
+  const manager = document.getElementById("manager");
 
-const toggler = document.getElementById("toggler");
+  // Toggle sidebar when button is clicked
+  toggler.addEventListener("click", function () {
+    if (sidebar.style.left === "0px") {
+      sidebar.style.left = "-500px";
+    } else {
+      sidebar.style.left = "0px";
+    }
+  });
 
-const manager = document.getElementById("manager");
-
-
-
-// Toggle sidebar when button is clicked
-toggler.addEventListener("click", function () {
-  if (sidebar.style.left === "0px") {
-    sidebar.style.left = "-500px";
-  } else {
-    sidebar.style.left = "0px";
-  }
-});
-
-window.addEventListener("click", function(e) {
-  if (!sidebar.contains(e.target) && (e.target) !== toggler) {
-    sidebar.style.left = "-500px";
-  }
-})
-
-
-
+  window.addEventListener("click", function(e) {
+    if (!sidebar.contains(e.target) && (e.target) !== toggler) {
+      sidebar.style.left = "-500px";
+    }
+  })
 </script>
-
-
 </body>
 </html>
