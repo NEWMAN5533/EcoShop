@@ -572,7 +572,7 @@ align-self: center;
 .section1-container {
   display: flex;
   width: 100%;
-  height: 14rem;
+  height: 17rem;
   position: relative;
   align-items: center;
   justify-content: space-between;
@@ -637,6 +637,18 @@ align-self: center;
   color: white;
   box-shadow: 0 0 2px rgb(35, 35, 56);
   margin: 0 0.4rem;
+
+}
+
+.deal-timer .box small {
+  font-size: 12px;   /* smaller labels */
+  opacity: 0.8;
+}
+
+.deal-timer .box span {
+  display: block;
+  font-size: 20px;   /* bigger numbers */
+  font-weight: bold;
 }
 
 .deal-timer h1 {
@@ -694,11 +706,12 @@ align-self: center;
 
 .fast-deal-product .product-bottom {
   width: 7rem;
-  height: 6rem;
+  height: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.3rem;
   text-align: center;
   color: var(--cl-primary);
   background-color: transparent;
@@ -708,6 +721,33 @@ align-self: center;
   color: var(--cl-hover);
   font-size: 1rem;
 }
+
+.old-price{
+  display: flex;
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  color: var(--br-1px);
+}
+
+.new-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.fast-deal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 1.4rem;
+  width: 80%;
+  border-radius: 4px;
+  background: var(--cl-btn);
+  color: white;
+}
+
 
 /**
 * FLASH DEAL SECTION
@@ -854,7 +894,7 @@ align-self: center;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 18rem;
+  min-height: 18vh;
   position: relative;
   align-items: center;
   border: none;
@@ -877,7 +917,7 @@ align-self: center;
   position: relative;
   align-items: center;
   color: var(--cl-primary);
-  background: red;
+  background: transparent;
   border-end-end-radius: var(--br-btn);
   border-start-start-radius: var(--br-btn);
 }
