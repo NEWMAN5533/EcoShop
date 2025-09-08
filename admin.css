@@ -240,7 +240,7 @@ border: 0.1px solid var(--cl-primary)
  }
 
   form, .edit-form {
-    width: 90%;
+    width: 100%;
     height: 24rem;
     display: flex;
     justify-self: center;
