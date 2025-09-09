@@ -241,7 +241,7 @@ border: 0.1px solid var(--cl-primary)
 
   form, .edit-form {
     width: 100%;
-    height: 24rem;
+    height: 44rem;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -315,24 +315,89 @@ border: 0.1px solid var(--cl-primary)
     color: white;
   }
 
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-  }
+/* === Modal Background === */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto; /* allow scroll if modal is taller than screen */
+}
 
+/* === Modal Content === */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form elements inside modal */
+.modal-content label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea,
+.modal-content button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.modal-content button {
+  cursor: pointer;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-content button[type="button"] {
+  background: #ccc;
+  color: #000;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 600px) {
   .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
+    width: 95%;
+    max-height: 90vh;  /* fit in screen */
+    overflow-y: auto;  /* scroll inside modal */
   }
+}
+
 
   .filters {
     margin-top: 15px;

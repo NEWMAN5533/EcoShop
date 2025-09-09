@@ -1,0 +1,27 @@
+[
+  {
+    "origin": [
+      "http://127.0.0.1:3002",
+      "http://localhost:3002",
+      "https://newman5533.github.io",
+      "https://newman5533.github.io/EcoShop",
+      "https://ecoshop-536ca.web.app",
+      "https://ecoshop-536ca.firebaseapp.com"
+    ],
+    "method": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "responseHeader": [
+      "Content-Type",
+      "x-goog-meta-*",
+      "x-goog-resumable",
+      "Authorization"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]
+
