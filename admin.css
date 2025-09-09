@@ -154,7 +154,7 @@ border: 0.1px solid var(--cl-primary)
     top: 3rem;
     bottom: 2rem;
     padding: 20px;
-    transition: 0.5s ease;
+    transition: 1s ease-in-out;
   position: fixed; /* or absolute if you want */
   left: 0;
   align-items: center;
